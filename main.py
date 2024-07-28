@@ -9,24 +9,29 @@ import json
 
 
 def search_website():
+    # no file exception handling
     try:
         open("password_bank.json")
 
     except FileNotFoundError:
         open("password_bank.json", mode="w")
 
+    # no entry at all exception handling
     website_to_look = website_entry.get()
-    with open("password_bank.json", "w") as pass_file:
+    with open("password_bank.json", "r") as pass_file:
         try:
-            json.load(pass_file)
-        except json.decoder.JSONDecodeError:
-            messagebox.showerror(title="No entries", message="Add at least one entry to the application before searching")
+            database_dict = json.load(pass_file)
+        except:
+            messagebox.showerror(message="There are no entries at all", title="Add Entries")
+
         else:
-
-
-#messagebox.showerror(title="404", message="Website not found in the database")
-#messagebox.showinfo(title=website_to_look,
-#message=f"User: {database_dict[website_to_look]["user"]} \nPassword: {database_dict[website_to_look]["password"]}")
+            try:
+                database_dict[website_to_look]
+            except:
+                messagebox.showerror(title="404", message="Website not found in the database")
+            else:
+                messagebox.showinfo(title=website_to_look,
+                                    message=f"User: {database_dict[website_to_look]["user"]} \nPassword: {database_dict[website_to_look]["password"]}")
 
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #

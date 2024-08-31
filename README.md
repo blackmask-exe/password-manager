@@ -3,5 +3,15 @@
 - **clean and simple gui, no distractions**
 
 
-ps
-I do not own the logo
+# Building the Application:
+
+1. Clone the repo onto your local machine:
+`git clone https://github.com/blackmask-exe/password-manager.git`
+
+2. change directory so that the working directory is the password manager directory:
+`cd password-manager`
+
+3. Install required packages:
+`pip install -r requirements.txt`
+
+4. Run the Password Manager by executing the main.py file

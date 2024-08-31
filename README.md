@@ -15,4 +15,7 @@
 Windows: `pip install -r requirements.txt`  
 OSX: `pip3 install -r requirements.txt`
 
-5. Run the Password Manager by executing the main.py file  
+5. Run the Password Manager by executing the main.py file
+Windows: `python main.py`  
+OSX: `python3 main.py`
+

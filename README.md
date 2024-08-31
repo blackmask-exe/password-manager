@@ -12,6 +12,7 @@
 `cd password-manager`
 
 3. Install required packages:  
-`pip install -r requirements.txt`
+Windows: `pip install -r requirements.txt`  
+OSX: `pip3 install -r requirements.txt`
 
-4. Run the Password Manager by executing the main.py file  
+5. Run the Password Manager by executing the main.py file  

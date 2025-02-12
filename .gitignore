@@ -1,0 +1,19 @@
+# macOS system files
+.DS_Store
+
+# Virtual environment
+venv/
+.env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore password storage file
+password_bank.json
